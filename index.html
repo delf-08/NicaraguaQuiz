@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Nicaragüense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bienvenido a Cultura Nicaragüense</h1>
+        <input type="text" id="username" placeholder="¿Cual es tu nombre?">
+        <button id="start-btn" onclick="startQuiz()">Iniciar</button>
+    </div>
+
+    <!-- Contenedor de barra de progreso -->
+    <div class="progress-container" id="progress-container" style="display: none;">
+        <div class="progress-bar" id="progress-bar"></div>
+        <p id="progress-text">Pregunta 1 de 10</p> <!-- El texto está fuera de la barra, dentro del contenedor -->
+    </div>
+     
+
+    <!-- Contenedor de preguntas y respuestas -->
+    <div class="question-box" id="question-box" style="display: none;">
+        <!-- Aquí se mostrará la pregunta -->
+    </div>
+    <div class="options-container" id="options-container" style="display: none;">
+        <!-- Aquí se mostrarán las opciones de respuesta -->
+    </div>
+
+    <!-- Mensaje para dispositivos de escritorio -->
+    <div class="desktop-message">
+        <h2>Próximamente en versión de escritorio...</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #a0f4ff58; /* Fondo cian claro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #00796b; /* Verde azulado */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+button {
+    padding: 15px 25px;
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #005e5b;
+}
+
+/* Estilos para el contenedor de progreso */
+.progress-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative; /* Permite usar posiciones absolutas dentro del contenedor */
+    height: 30px; /* Establece altura para el contenedor */
+    text-align: center; /* Centrar el contenido dentro del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 100%; /* Llenar toda la altura del contenedor */
+    background-color: #00796b;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+#progress-text {
+    position: absolute; /* Posición absoluta para centrar sobre la barra */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex; /* Centrar texto en ambos ejes */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    color: #000000; /* Color del texto */
+    font-weight: bold;
+    z-index: 1; /* Asegura que el texto esté encima de la barra */
+}
+
+
+
+/* Question Box Styles */
+.question-box {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #00796b;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    flex-direction: column; /* Apilar las opciones verticalmente */
+    align-items: center; /* Centrar las opciones */
+    gap: 10px; /* Espacio entre botones */
+    width: 100%; /* Asegura que tome todo el ancho disponible */
+    max-width: 400px; /* Máximo ancho para alineación */
+}
+
+/* Option Button Styles */
+.option-button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px; /* Máximo ancho de los botones */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.option-button:hover {
+    background-color: #005e5b; /* Cambia color al hacer hover */
+    transform: translateY(-2px); /* Efecto hover */
+}
+
+/* Mensaje para dispositivos de escritorio */
+.desktop-message {
+    display: none; /* Por defecto, oculto en todas las pantallas */
+}
+
+/* Mostrar el mensaje en pantallas de más de 768px */
+@media (min-width: 768px) {
+    .container {
+        display: none; /* Ocultar el contenedor principal */
+    }
+    .desktop-message {
+        display: block; /* Mostrar mensaje de escritorio */
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5em;
+        background-color: #ffffffa7;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+    }
+}
